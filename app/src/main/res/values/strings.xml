@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">XML Test</string>
+    <string name="text">TextView</string>
+</resources>
