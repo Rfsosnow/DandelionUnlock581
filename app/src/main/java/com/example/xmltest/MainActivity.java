@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_RECORD_AUDIO = 13;
     private boolean running = true;
@@ -72,6 +74,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+        imageView = (ImageView) findViewById(R.id.bgd);
+
+        Random randomGen = new Random();
+        if(randomGen.nextBoolean()){
+            imageView.setImageResource(R.drawable.journeybgd);
+        }
 
         //Listener Functionality Begins
         getPermission();
